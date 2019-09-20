@@ -1,6 +1,4 @@
 pipeline {
-    environment {
-    PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;"
     agent any
     stages{
         stage('Build'){
@@ -13,7 +11,6 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
              }
-            }
-        }
-    }
- }  
+         }
+     }
+}
